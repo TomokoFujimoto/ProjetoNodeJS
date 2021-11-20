@@ -6,6 +6,8 @@ const port = 8000;
 const taskRouter = require("./routes/tasks");
 const Task = require("./models/task");
 
+Task.sync(); 
+
 app.use(express.json());
 app.use("/tasks", taskRouter.router);
 
